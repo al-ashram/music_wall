@@ -1,7 +1,0 @@
-<% @messages.each do |message| %>
-  <div class="message">
-    <h3><a href="/messages/<%= message.id %>"><%= message.author %>: </a><%= message.content %></h3>
-  <div>
-<% end %>
-
-<a href="/messages/new">Post a message...It's FREE (for now)!</a>

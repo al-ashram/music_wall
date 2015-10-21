@@ -1,0 +1,32 @@
+<a href="/songs/new" class="btn btn-info">Post a Song</a>
+
+
+<table class="list_all">
+  <tr align="left">
+    <th><h4>Photo</h4></th>
+    <th><h4>Song</h4></th>
+    <th><h4>Artist</h4></th>
+  </tr>
+  <% @songs.each do |song| %>
+    <tr>
+      <td>
+        <% if song.url != ""%>
+            <img class="profile_image" src="<%= song.url %>" alt="Artist's Picture">
+        <% else %>
+            <img class="profile_image" src="/img/default.jpg" alt="Artist's Picture2">
+        <% end %>
+      </td>
+      <td>
+        <a href="/songs/<%= song.id %>"><strong><%= song.title %></strong></a>
+      </td>
+      <td>
+        <strong><%= song.author %></strong>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+
+
+
+

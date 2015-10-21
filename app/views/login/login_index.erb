@@ -1,0 +1,19 @@
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+
+<form method="post" action="/login" class="form-horizontal">
+  <div>
+    <label class="control-label">Email:</label>
+    <input type="email" required name="email" value="<%= @user && @user.email %>">
+  </div>
+  <div>
+    <label class="control-label">Password:</label>
+    <input type="password" required name="password" value="<%= @user && @user.password %>">
+  </div>
+  <br>
+  <div>
+    <input class="btn btn-info" type="submit" value="Login">
+  </div>
+</form>

@@ -1,0 +1,12 @@
+.profile_image {
+  height: 80px;
+  width: 80px;
+}
+
+.list_all td{
+  width: 200px;
+}
+
+th h4 {
+  text-decoration: underline;
+}

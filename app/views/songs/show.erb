@@ -1,0 +1,15 @@
+<h1>Author: <%= @song.author %></h1>
+
+<p>
+  <%= @song.title %>
+</p>
+<p>
+  <a href=<%= @song.url && "http://" + @song.url %>><%=@song.url%></a>
+</p>
+
+<p>
+  Created on: <%= @song.created_at %>
+</p>
+
+<hr/>
+<a href="/songs">Back to all songs</a>

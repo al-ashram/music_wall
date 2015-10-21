@@ -1,0 +1,29 @@
+<% if @song.errors.any? %>
+  <div>
+    <strong>Some issues with your message, please find them:</strong>
+    <ul>
+      <% @song.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %> 
+
+<form method="post" action="/songs" class="form-horizontal">
+  <div>
+    <label class="control-label">Song Title:</label>
+    <input type="text" name="title" value="<%= @song.title %>">
+  </div>
+  <div>
+    <label class="control-label">Author:</label>
+    <input type="text" name="author" value="<%= @song.author %>">
+  </div>
+  <div>
+    <label class="control-label">URL:</label>
+    <input type="text" name="url" value="<%= @song.url %>">
+  </div>
+  <br>
+  <div>
+    <input class="btn btn-info" type="submit" value="Submit">
+  </div>
+</form>
